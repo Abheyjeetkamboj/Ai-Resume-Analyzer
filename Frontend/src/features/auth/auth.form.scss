@@ -1,4 +1,5 @@
 main{
+    
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -19,15 +20,20 @@ main{
     .input-group{
         display: flex;
         flex-direction: column;
-
         gap:0.5rem
+        
+    }
+    input{
+        border:none;
+        outline:none;
+        padding-inline: 1rem;
+        padding-block: 0.75rem;
+        border-radius: 0.75rem;
+        
+    }
 
-        input{
-            border:none;
-            outline:none;
-            padding-inline: 1rem;
-            padding-block: 0.75rem;
-            border-radius: 0.75rem;
-        }
+    a{
+        color: #e1034d;
+        text-decoration: none;
     }
 }
