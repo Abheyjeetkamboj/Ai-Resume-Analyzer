@@ -1,48 +1,48 @@
 import axios from "axios";
 
-axios.create({
+const api = axios.create({
     baseURL: "http://localhost:3000",
     withCredentials: true,
 })
 
-export async function registerUser({username,email,password}) {
+export async function register({username,email,password}) {
     try{
         const response = await api.post('/api/auth/register',{username,email,password})
         return response.data
     }
     catch(err){
-        conosle.log(err);
+        console.log(err);
     }
 }
 
-export async function loginUser({email,password}) {
+export async function login({email,password}) {
     try{
         const response = await api.post('/api/auth/login',{email,password})
         return response.data
     }
     catch(err){
-        conosle.log(err);
+        console.log(err);
     }
 }
 
-export async function logoutUser() {
+export async function logout() {
     try{
         const response = await api.post('/api/auth/logout')
         return response.data
     }
     
     catch(err){
-        conosle.log(err);
+        console.log(err);
     }
 }
 
-export async function getUser() {
+export async function getMe() {
     try{
-        const response = await api.get('/api/auth/user',)
+        const response = await api.get('/api/auth/get-me',)
         return response.data
     }
     catch(err){
-        conosle.log(err);
+        console.log(err);
     }
 }
 
